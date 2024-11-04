@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SADAKO</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-card">
+        <div class="card">
+          <div class="card-header text-center font-weight-bold">
+            <h2>
+              Sistem Aplikasi Data Pemeriksaan Online (SADAKO) <br />
+              BPJS Kesehatan Cabang Jakarta Utara
+            </h2>
+          </div>
+          <div class="card-body">
+            <h6>
+              <p>
+                <a
+                  href="https://drive.google.com/drive/folders/1RSzLBfalOwvqLa7qrRuz21fYGY-GRJit"
+                  target="_blank"
+                  >Contoh berkas pemeriksaan dapat diakses pada link berikut
+                </a>
+              </p>
+            </h6>
+            <div class="content">
+              <div class="user-details">
+                <form
+                  method="POST"
+                  id="uploadForm"
+                  enctype="multipart/form-data"
+                  action="https://script.google.com/macros/s/AKfycby1wItwoupRRnBvntntEWsFADXpkecVfvJ13WU6lrebta9kPlbuyt025sM-mwsJ8SQKxA/exec"
+                >
+                  <input
+                    type="hidden"
+                    value=""
+                    name="fileContent"
+                    id="fileContent"
+                  />
+                  <input type="hidden" value="" name="filename" id="filename" />
+                  <div class="form-group">
+                    <label for="namabu"
+                      ><b>Nama Badan Usaha</b> <br />Tuliskan nama badan usaha
+                      <b>TANPA</b> menggunakan "PT/CV/Yayasan/dsb" contoh: PT
+                      Sukses Maju, maka cukup dituliskan "Sukses Maju"</label
+                    >
+                    <input
+                      type="text"
+                      id="namabu"
+                      name="namabu"
+                      class="form-control"
+                      placeholder="Nama Badan Usaha"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="kodebu"><b>Kode Badan Usaha</b></label>
+                    <input
+                      type="text"
+                      id="kodebu"
+                      name="kodebu"
+                      class="form-control"
+                      placeholder="Nama Badan Usaha"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="ro"><b>Relationship Officer</b></label>
+                    <select
+                      class="form-control"
+                      type="ro"
+                      id="ro"
+                      name="ro"
+                      required
+                    >
+                      <option>Pilih :</option>
+                      <option value="Fajar">Fajar +62 811896605</option>
+                      <option value="Maya">Maya +62 8119233349</option>
+                      <option value="Zulfa">Zulfa +62 8118994550</option>
+                      <option value="Dara">Dara +62 8111707242</option>
+                      <option value="Della">Della +62 81117701012</option>
+                      <option value="Made">Made +62 81222423999</option>
+                      <option value="Lia">Lia +62 8119552626</option>
+                      <option value="Irfan">Irfan +62 8119797833</option>
+                      <option value="Ikhsan">Ikhsan +62 8118121190</option>
+                      <option value="Naufal">Naufal +62 81110001065</option>
+                      <option value="Indah">Indah +62 8111461141</option>
+                      <option value="Fadhil">Fadhil +62 85211275364</option>
+                      <option value="Tika">Tika +62 81285529592</option>
+                      <option value="Uti">Uti +62 8111240210</option>
+                      <option value="Faldy">Faldy +62 81215314400</option>
+                      <option value="Roy">Roy +62 85210039646</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="picbu"><b>Nama PIC Badan Usaha</b></label>
+                    <input
+                      type="text"
+                      name="picbu"
+                      class="form-control"
+                      id="picbu"
+                      placeholder="Nama PIC Badan Usaha"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="kontak"
+                      ><b>No. Handphone PIC Badan Usaha</b></label
+                    >
+                    <input
+                      type="text"
+                      name="kontak"
+                      class="form-control"
+                      id="kontak"
+                      placeholder="No. Handphone PIC Badan Usaha"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email"><b>Email PIC Badan Usaha</b></label>
+                    <input
+                      type="text"
+                      name="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Email PIC Badan Usaha"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="p_terdaftar"
+                      ><b
+                        >Jumlah Pekerja Terdaftar BPJS Kesehatan Badan Usaha</b
+                      ></label
+                    >
+                    <input
+                      type="text"
+                      name="p_terdaftar"
+                      class="form-control"
+                      id="p_terdaftar"
+                      placeholder="Jumlah Pekerja Terdaftar"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="p_belumterdaftar"
+                      ><b
+                        >Jumlah Pekerja Belum Terdaftar BPJS Kesehatan Badan
+                        Usaha</b
+                      ></label
+                    >
+                    <input
+                      type="text"
+                      name="p_belumterdaftar"
+                      class="form-control"
+                      id="p_belumterdaftar"
+                      placeholder="Jumlah Pekerja Belum Terdaftar"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="p_wlk"
+                      ><b
+                        >Jumlah Pekerja Wajib Lapor Ketenagakerjaan (WLK)</b
+                      ></label
+                    >
+                    <input
+                      type="text"
+                      name="p_wlk"
+                      class="form-control"
+                      id="p_wlk"
+                      placeholder="Jumlah Pekerja WLK"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="keterangan"> <b>Keterangan</b> </label>
+                    <textarea
+                      class="form-control"
+                      id="keterangan"
+                      name="keterangan"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                  <div class="form-group" style="margin-top: 15px">
+                    <label for="file" class="form-label">
+                      <b>Masukkan Berkas yang di Perlukan :</b>
+                      <br>1.  SPT Masa Pajak Penghasilan Pasal 21 dan/atau Pasal 26 bulan terakhir (Form 1721)</br>
+                      <br>2. Data kepesertaan Jaminan Ketenagakerjaan (BPJS Ketenagakerjaan) bulan berjalan (Form 2a PU)</br>
+                      <br>3. <i>Billing Statement</i> Jaminan Ketenagakerjaan (BPJS Ketenagakerjaan) bulan berjalan (Form 2a)</br>
+                      <br>4. Data pekerja bulan berjalan dalam bentuk soft copy (<i>payroll</i>)</br>
+                      <br>5. <i>Billing Statement</i> BPJS Kesehatan bulan berjalan</br>
+                      <br>6. Form Pengalihan PBI Kesehatan yang diisi oleh PIC / Pimpinan dengan kop surat Badan Usaha (Format Terlampir pada Email)</br>
+                      </label
+                    ><br />
+                    <input id="attach" name="attach" type="file" required />
+                  </div>
+
+                  <div class="button">
+                    <input
+                      class="btn btn-success btn-block mt-4"
+                      style="width: 100%"
+                      type="button"
+                      value="KIRIM DATA"
+                      onclick="UploadFile();"
+                    />
+                  </div>
+                  <button
+                    class="btn btn-danger"
+                    type="reset"
+                    style="width: 100%; margin-top: 5px"
+                  >
+                    RESET FORM
+                  </button>
+
+                  <div id="loading" style="display: none">
+                    <div class="spinner"></div>
+                    <p>Loading...</p>
+                  </div>
+
+                  <script>
+                    function UploadFile() {
+                      var fileInput = document.getElementById("attach");
+                      var file = fileInput.files[0];
+                  
+                      if (!file) {
+                        alert("Silakan pilih file terlebih dahulu!");
+                        return;
+                      }
+                  
+                      var reader = new FileReader();
+                      reader.onload = function () {
+                        document.getElementById("fileContent").value = reader.result;
+                        document.getElementById("filename").value = file.name;
+                  
+                        var confirmSubmit = confirm("Apakah Anda yakin ingin mengunggah file ini?");
+                        if (confirmSubmit) {
+                          // Tampilkan loading
+                          document.getElementById("loading").style.display = "block";
+                          
+                          // Kirim data menggunakan AJAX
+                          var formData = new FormData(document.getElementById("uploadForm"));
+                          
+                          fetch('https://script.google.com/macros/s/AKfycby1wItwoupRRnBvntntEWsFADXpkecVfvJ13WU6lrebta9kPlbuyt025sM-mwsJ8SQKxA/exec', {
+                            method: 'POST',
+                            body: formData
+                          })
+                          .then(response => {
+                            // Setelah pengiriman selesai, sembunyikan loading
+                            document.getElementById("loading").style.display = "none";
+                            
+                            // Tampilkan kembali form atau lakukan tindakan lainnya
+                            alert("File berhasil diunggah!");
+                            // Reset form atau tampilkan kembali form
+                            document.getElementById("uploadForm").reset();
+                          })
+                          .catch(error => {
+                            document.getElementById("loading").style.display = "none";
+                            alert("Terjadi kesalahan saat mengunggah file.");
+                          });
+                        }
+                      };
+                  
+                      reader.readAsDataURL(file);
+                    }
+                  </script>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
